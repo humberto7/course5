@@ -7,7 +7,7 @@ angular.module('LunchCheck', [])
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.click = function () {
-    if( $scope.dishes == "" || $scope.dishes == null  )
+    if( $scope.dishes == "" || $scope.dishes == null )
     {
       $scope.message = "Please enter data first";
       return;
