@@ -7,12 +7,12 @@ angular.module('LunchCheck', [])
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.click = function () {
-    if( $scope.dishes == "" )
+    if( $scope.dishes == "" || $scope.dishes == null  )
     {
       $scope.message = "Please enter data first";
       return;
     }
-    
+
     var dishes = $scope.dishes.split(",").filter(function(el) {return el.trim().length != 0});
     if( dishes.length > 3 )
       $scope.message = "Too much!";
